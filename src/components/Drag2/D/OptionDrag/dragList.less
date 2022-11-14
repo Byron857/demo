@@ -1,0 +1,32 @@
+.dragList {
+
+}
+
+// 拖拽后 dragList 与 dragItem 的嵌套关系就被打乱
+.dragItem {
+    z-index: 999999;
+    position: relative;
+    line-height: 38px;
+    padding-left: 20px;
+    padding-right: 40px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    .dragItemIconClose {
+        position: absolute;
+        top: 12px;
+        right: 42px;
+        cursor: pointer;
+    }
+    .dragItemIconHandle {
+        position: absolute;
+        top: 12px;
+        right: 22px;
+        cursor: pointer;
+    }
+}
+
+
+
+// :global(.ant-message){
+//     z-index: 999999;
+// }

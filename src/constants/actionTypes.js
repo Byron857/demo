@@ -1,0 +1,6 @@
+// List
+export const FETCH_LIST_DATA = 'FETCH_LIST_DATA'
+
+// Home
+export const FETCH_HOME_TAGS = 'FETCH_HOME_TAGS'
+export const FETCH_HOME_CHECKBOX = 'FETCH_HOME_CHECKBOX'

@@ -1,0 +1,28 @@
+---
+name: Box
+menu: Components
+route: /components/Box
+---
+
+import { Playground, Props } from 'docz'
+import Box from './index'
+
+# Box
+
+## 代码演示
+<Playground>
+
+    {/*加载中*/}
+  <Box loading={true}> Some message </Box>
+
+    {/*暂无数据*/}
+  <Box loading={false} isNoData={true}>Some message</Box>
+
+</Playground>
+
+## API
+
+属性 | 说明 | 类型 | 默认值
+---- | --- | --- | ---
+loading | 开启加载效果 | boolean | false
+isNoData |  开启无数据效果 | boolean | false
