@@ -69,9 +69,10 @@ const SortTablejs = () => {
 }
 
 function SortableGroup({ ruleset, level = 0, setRuleset, allData }) {
+
     const { children, id } = ruleset;
 
-    console.log(children, id, 'children, id');
+    console.log(children, id, 'children, id123');
 
     const updateGroupOrder = (id, newList) => {
         const toUpdate = dfs(allData, id);
