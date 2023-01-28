@@ -16,6 +16,7 @@ import Range from '@@/Range'
 import UbitRange from '@@/UbitRange'
 import SmoothDnd from '@@/SmoothDnd'
 import SortTablejs from '@@/SortTablejs'
+import FromCom from '@@/FromCom'
 
 export default function Com() {
 
@@ -29,12 +30,13 @@ export default function Com() {
     }
 
     return (
-        <div style={{ width: '100%', backgroundColor: 'rgb(25,27,32)', height: '100%', paddingTop: '100px' }}>
-            <div className='comBox'>
+        <div style={{ width: '100%', height: '100%' }}>
+            {/* <div className='comBox'>
                 <SmoothDnd />
-            </div>
+            </div> */}
             {/* <div className={classNames('sss', { [aaaname]: true })}>123</div> */}
             {/* <div>5556778</div> */}
+            <FromCom />
             <style jsx>
                 {`
                     .sss{
