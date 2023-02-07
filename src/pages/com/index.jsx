@@ -1,4 +1,5 @@
-import React, { useState, Component } from 'react'
+import React, { useState, useEffect } from 'react'
+import { nanoid } from 'nanoid'
 import { Button } from 'antd'
 import classNames from 'classnames'
 import Abc from '@@/Abc'
@@ -29,6 +30,8 @@ export default function Com() {
         setValue(val)
     }
 
+    const keyCode = nanoid(16) //生成唯一id
+
     return (
         <div style={{ width: '100%', height: '100%' }}>
             {/* <div className='comBox'>
@@ -36,7 +39,8 @@ export default function Com() {
             </div> */}
             {/* <div className={classNames('sss', { [aaaname]: true })}>123</div> */}
             {/* <div>5556778</div> */}
-            <FromCom />
+            {/* <FromCom /> */}
+            {keyCode}
             <style jsx>
                 {`
                     .sss{
