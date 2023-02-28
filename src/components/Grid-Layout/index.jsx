@@ -13,7 +13,12 @@ export default class MyFirstGrid extends React.Component {
         const layout = [
             { i: 'a', x: 0, y: 0, w: 1, h: 2 },
             { i: 'b', x: 0, y: 0, w: 2, h: 2 },
-            { i: 'c', x: 0, y: 0, w: 3, h: 2 }
+            { i: 'c', x: 0, y: 0, w: 3, h: 10, static: true }
+        ];
+        const _layout = [
+            { i: 'c-1', x: 0, y: 0, w: 1, h: 2 },
+            { i: 'c-2', x: 0, y: 0, w: 2, h: 2 },
+            { i: 'c-3', x: 0, y: 0, w: 3, h: 2 }
         ];
         return (
             <GridLayout
@@ -35,7 +40,30 @@ export default class MyFirstGrid extends React.Component {
             >
                 <div key="a" style={{ backgroundColor: 'white' }}>a</div>
                 <div key="b" style={{ backgroundColor: 'white' }}>b</div>
-                <div key="c" style={{ backgroundColor: 'white' }}>c</div>
+                {/* <div  style={{ backgroundColor: 'white' }}>c</div> */}
+                <div key="c" style={{ backgroundColor: 'white' }}>
+                    <GridLayout
+                        className="layout"
+                        isResizable={false}
+                        layout={_layout}
+                        cols={3}
+                        rowHeight={15}
+                        width={200}
+                        onDrop={(layout, item, e) => {
+                            console.log(layout, 'layout1');
+                        }}
+                        onLayoutChange={(layout) => {
+                            console.log(layout, 'layout2')
+                        }}
+                        onDragStop={(layout) => {
+                            console.log(layout, 'layout3')
+                        }}
+                    >
+                        <div key="c-1" style={{ backgroundColor: 'red' }}>a</div>
+                        <div key="c-2" style={{ backgroundColor: 'red' }}>b</div>
+                        <div key="c-3" style={{ backgroundColor: 'red' }}>c</div>
+                    </GridLayout>
+                </div>
             </GridLayout>
         )
     }
