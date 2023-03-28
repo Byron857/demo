@@ -18,7 +18,7 @@ import UbitRange from '@@/UbitRange'
 import SmoothDnd from '@@/SmoothDnd'
 import SortTablejs from '@@/SortTablejs'
 import FromCom from '@@/FromCom'
-// import ReactSortablejs from '@@/ReactSortablejs'
+import ReactSortablejs from '@@/ReactSortablejs'
 import ReactDnd from '@@/ReactDnd'
 
 
@@ -36,7 +36,10 @@ export default function Com() {
     const keyCode = nanoid(16) //生成唯一id
 
     return (
-        <div style={{ width: '100%', height: '100%', background: 'skyblue' }}>
+        <div style={{
+            width: '100%', height: '100%',
+            // background: 'skyblue'
+        }}>
             {/* <div className='comBox'>
                 <SmoothDnd />
             </div> */}
@@ -44,7 +47,8 @@ export default function Com() {
             {/* <div>5556778</div> */}
             {/* <FromCom /> */}
             {/* {keyCode} */}
-            <ReactDnd />
+            {/* <EditTable /> */}
+            <ReactSortablejs />
             <style jsx>
                 {`
                     .sss{
@@ -67,5 +71,3 @@ export default function Com() {
         </div>
     )
 }
-
-
