@@ -20,7 +20,7 @@ import SortTablejs from '@@/SortTablejs'
 import FromCom from '@@/FromCom'
 import ReactSortablejs from '@@/ReactSortablejs'
 import ReactDnd from '@@/ReactDnd'
-
+import FullscreenDraggable from '@@/FullscreenDraggable'
 
 export default function Com() {
 
@@ -35,6 +35,31 @@ export default function Com() {
 
     const keyCode = nanoid(16) //生成唯一id
 
+    const columns = [
+        {
+            title: "Name",
+            dataIndex: "name",
+        },
+        {
+            title: "Age",
+            dataIndex: "age",
+        },
+        {
+            title: "Address",
+            dataIndex: "address",
+        },
+    ];
+
+    const data = [];
+    for (let i = 0; i < 100000; i++) {
+        data.push({
+            key: i,
+            name: `John Doe ${i}`,
+            age: Math.floor(Math.random() * 100),
+            address: `Address ${i}`,
+        });
+    }
+
     return (
         <div style={{
             width: '100%', height: '100%',
@@ -48,7 +73,10 @@ export default function Com() {
             {/* <FromCom /> */}
             {/* {keyCode} */}
             {/* <EditTable /> */}
-            <ReactSortablejs />
+            {/* <ReactSortablejs /> */}
+            <FullscreenDraggable>
+                <div style={{ width: 100, height: 100, backgroundColor: "red" }}></div>
+            </FullscreenDraggable>
             <style jsx>
                 {`
                     .sss{
