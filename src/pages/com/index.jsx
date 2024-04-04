@@ -23,7 +23,7 @@ import ReactDnd from '@@/ReactDnd'
 import FullscreenDraggable from '@@/FullscreenDraggable'
 
 export default function Com() {
-
+    console.log('Com组件');
     // const update = useUpdate();
 
     const [value, setValue] = useState([5, 18])
